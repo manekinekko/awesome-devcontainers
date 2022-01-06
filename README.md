@@ -28,8 +28,15 @@
 - [Articles](#articles)
 - [Videos](#videos)
 - [Samples](#samples)
-  - [Node.js](#nodejs)
+  - [C/C++](#cc)
   - [Go](#golang)
+  - [Java](#java)
+  - [.NET](#net)
+  - [Node.js](#nodejs)
+  - [PHP](#php)
+  - [Python](#python)
+  - [Ruby](#ruby)
+  - [Rust](#rust)
   - [Misc.](#misc)
 
 ### Tools
@@ -56,13 +63,42 @@
 
 ### Samples
 
-#### Node.js
+#### C/C++
 
-- [Try Out Development Containers: Node.js](https://github.com/microsoft/vscode-remote-try-node) - A development container is a running Docker container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GitHub Codespaces or Visual Studio Code Remote - Containers.
+- [Try Out Development Containers: C++](https://github.com/microsoft/vscode-remote-try-cpp) - C++ sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
 
 #### Golang
 
 - [Go Dev Container](https://github.com/qdm12/godevcontainer) - Ultimate Go development container for Visual Studio Code.
+- [Try Out Development Containers: Go](https://github.com/microsoft/vscode-remote-try-go) - Golang sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### Java
+
+- [Try Out Development Containers: Java](https://github.com/microsoft/vscode-remote-try-java) - Java sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### .NET
+
+- [Try Out Development Containers: .NET Core](https://github.com/microsoft/vscode-remote-try-dotnetcore) - .NET Core sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### Node.js
+
+- [Try Out Development Containers: Node.js](https://github.com/microsoft/vscode-remote-try-node) - Node.js sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### PHP
+
+- [Try Out Development Containers: PHP](https://github.com/microsoft/vscode-remote-try-php) - PHP sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### Python
+
+- [Try Out Development Containers: Python](https://github.com/microsoft/vscode-remote-try-python) - Python sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### Ruby
+
+- [Try Out Development Containers: Ruby](https://github.com/microsoft/vscode-remote-try-ruby) - Ruby sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+
+#### Rust
+
+- [Try Out Development Containers: Rust](https://github.com/microsoft/vscode-remote-try-rust) - Rust sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
 
 #### Misc.
 
