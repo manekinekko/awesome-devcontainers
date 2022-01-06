@@ -31,8 +31,7 @@
 </div>
 
 
-Table of Contents
-=================
+## Table of Contents
 
 <!--lint disable awesome-list-item-->
 - [Tools](#tools)
