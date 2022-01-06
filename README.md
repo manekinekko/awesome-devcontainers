@@ -13,7 +13,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Awesome devcontainers</h3>
+  <h1 align="center">Awesome devcontainers <a href="https://awesome.re" target="__blank"><img src="https://awesome.re/badge-flat2.svg"/></a> </h1>
 
   <p align="center">
     A curated list of awesome devcontainers for common programming languages, technology stacks <br />for VS Code and GitHub Codespaces 🚀
@@ -31,16 +31,11 @@
 </div>
 
 
+**Table of Contents**
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#code">Code</a></li>
-    <li><a href="#articles">Articles</a></li>
-    <li><a href="#videos">Videos</a></li>
-  </ol>
-</details>
+- [Code](#code)
+- [Articles](#articles)
+- [Videos](#videos)
 
 ## Code
 
