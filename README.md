@@ -26,6 +26,7 @@
 - [Tools](#tools)
 - [Samples](#samples)
 - [Articles](#articles)
+- [Videos](#videos)
 
 ## Tools
 
