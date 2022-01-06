@@ -37,6 +37,7 @@
 ### Samples
 
 - [Try Out Development Containers: Node.js](https://github.com/microsoft/vscode-remote-try-node) - A development container is a running Docker container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GitHub Codespaces or Visual Studio Code Remote - Containers.
+- [ROS dev container for VS Code](https://github.com/devrt/ros-devcontainer-vscode) - A preconfigured docker image for ROS (Robot Operating System) development. Preconfigured code completion for C++, Python, XML (package.xml, launchfiles, URDF, SDF). Preconfigured simulation environments (Flatland, TurtleBot3, ARIAC, Virtual RobotX, UUV).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
