@@ -52,5 +52,7 @@
 ### Videos
 
 - [GitHub Codespaces - A Game Changer](https://www.youtube.com/watch?v=B_gtLXvDQhE) - In this demo Alvaro Videla made the RabbitMQ tutorials "Codespaces ready" and ran them directly from the browser without the need to install RabbitMQ or Node.js.
+- [Remote Development with Visual Studio Code](https://www.youtube.com/watch?v=sakjpegUQsk) - In this session, Brigit Murtaugh will demo how to use the VS Code Remote extensions to connect to remote environments and build and deploy applications using the same, familiar Visual Studio Code you already know locally.
+- [A clean dev env, working every time, everywhere](https://www.youtube.com/watch?v=NNrq2641zTA) - In this session, Yohan Lasorsa will demo how to isolate each of your projects' environment, and share it with your teammates to quickly onboard newcomers.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
