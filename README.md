@@ -1,5 +1,6 @@
 <div id="top"></div>
 
+[![Awesome][awesome-shield]][awesome-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -55,6 +56,8 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+[awesome-shield]: https://awesome.re/badge-flat2.svg
+[awesome-url]: https://awesome.re
 [contributors-shield]: https://img.shields.io/github/contributors/manekinekko/awesome-devcontainers.svg?style=flat-square
 [contributors-url]: https://github.com/manekinekko/awesome-devcontainers/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/manekinekko/awesome-devcontainers.svg?style=flat-square
