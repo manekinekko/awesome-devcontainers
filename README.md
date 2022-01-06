@@ -34,6 +34,7 @@
 Table of Contents
 =================
 
+<!--lint disable awesome-list-item-->
 - [Tools](#tools)
 - [Samples](#samples)
 - [Articles](#articles)
