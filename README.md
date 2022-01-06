@@ -31,11 +31,12 @@
 </div>
 
 
-## Table of Contents
+Table of Contents
+=================
 
-- [Tools](#tools)
-- [Samples](#samples)
-- [Articles](#articles)
+  * [Tools](#tools)
+  * [Samples](#samples)
+  * [Articles](#articles)
 
 ## Tools
 
