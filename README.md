@@ -31,7 +31,7 @@
 </div>
 
 
-**Table of Contents**
+## Table of Contents
 
 - [Tools](#tools)
 - [Samples](#samples)
@@ -39,20 +39,20 @@
 
 ## Tools
 
-* [VS Code Remote DevelopmentPreview](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
+- [VS Code Remote DevelopmentPreview](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Samples
 
-* [Try Out Development Containers: Node.js](https://github.com/microsoft/vscode-remote-try-node) - A development container is a running Docker container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GitHub Codespaces or Visual Studio Code Remote - Containers.
+- [Try Out Development Containers: Node.js](https://github.com/microsoft/vscode-remote-try-node) - A development container is a running Docker container with a well-defined tool/runtime stack and its prerequisites. You can try out development containers with GitHub Codespaces or Visual Studio Code Remote - Containers.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ## Articles
 
-* [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers) - Visual Studio Code Remote Containers official documentation.
+- [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers) - Visual Studio Code Remote Containers official documentation.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
