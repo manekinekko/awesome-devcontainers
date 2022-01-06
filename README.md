@@ -13,6 +13,8 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
+  
+  <!--lint disable awesome-heading-->
   <h1 align="center">Awesome devcontainers <a href="https://awesome.re" target="__blank"><img src="https://awesome.re/badge-flat2.svg"/></a> </h1>
 
   <p align="center">
