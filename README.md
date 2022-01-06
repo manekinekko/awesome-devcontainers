@@ -8,13 +8,12 @@
 [![MIT License][license-shield]][license-url]
 
 <br />
+<!--lint disable awesome-heading-->
 <div align="center">
   <a href="https://github.com/manekinekko/awesome-devcontainers">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-
   
-  <!--lint disable awesome-heading-->
   <h1 align="center">Awesome devcontainers <a href="https://awesome.re" target="__blank"><img src="https://awesome.re/badge-flat2.svg"/></a> </h1>
 
   <p align="center">
@@ -56,6 +55,7 @@
 ## Articles
 
 - [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers) - Visual Studio Code Remote Containers official documentation.
+- [Your open source project needs a devcontainer. Here is why](https://www.aaron-powell.com/posts/2021-03-08-your-open-source-project-needs-a-dev-container-heres-why/) - Devcontainers are awesome, we can use them to define an isolated development environment within Docker that has all that we need, and only what we need, installed in it.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
