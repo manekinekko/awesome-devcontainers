@@ -10,7 +10,7 @@
   <h1 align="center">Awesome devcontainers <a href="https://awesome.re" target="__blank"><img src="https://awesome.re/badge-flat2.svg"/></a> </h1>
 
   <p align="center">
-    A curated list of awesome tools and resources about devcontainers for common programming languages, <br />technology stacks and use cases for VS Code and GitHub Codespaces 🚀
+    A curated list of awesome tools and resources about <a href="https://code.visualstudio.com/docs/remote/containers">devcontainers</a> for common programming languages <br /> and technology stacks to boost your developer productivity 🚀
     <br />
     <br />
     <a href="https://github.com/manekinekko/awesome-devcontainers/issues">Report an issue</a>
