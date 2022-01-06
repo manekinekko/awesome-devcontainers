@@ -47,4 +47,7 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+# Videos
+
+- [GitHub Codespaces - A Game Changer](https://www.youtube.com/watch?v=B_gtLXvDQhE) - In this demo Alvaro Videla made the RabbitMQ tutorials "Codespaces ready" and ran them directly from the browser without the need to install RabbitMQ or Node.js.
 
