@@ -62,6 +62,8 @@
 - [Remote Development with Visual Studio Code](https://www.youtube.com/watch?v=sakjpegUQsk) - In this session, Brigit Murtaugh demos how to use the VS Code Remote extensions to connect to remote environments and build and deploy applications using the same, familiar Visual Studio Code you already know locally.
 - [A clean dev env, working every time, everywhere](https://www.youtube.com/watch?v=NNrq2641zTA) - In this session, Yohan Lasorsa demos how to isolate each of your projects' environment, and share it with your teammates to quickly onboard newcomers.
 
+- [Beginner's Series to: Dev Containers](https://docs.microsoft.com/shows/beginners-series-to-dev-containers/) - A series of videos about dev containers in Visual Studio Code! We'll show you how to get, create, and configure a container-based development environment with the VS Code Remote - Containers extension.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Samples
