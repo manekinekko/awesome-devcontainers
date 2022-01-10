@@ -7,10 +7,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
   
-  <h1 align="center">Awesome devcontainers <a href="https://awesome.re" target="__blank"><img src="https://awesome.re/badge-flat2.svg"/></a> </h1>
+  <h1 align="center">Awesome dev containers <a href="https://awesome.re" target="__blank"><img src="https://awesome.re/badge-flat2.svg"/></a> </h1>
 
   <p align="center">
-    A curated list of awesome tools and resources about <a href="https://code.visualstudio.com/docs/remote/containers">devcontainers</a> for common programming languages <br /> and technology stacks to boost your developer productivity 🚀
+    A curated list of awesome tools and resources about <a href="https://code.visualstudio.com/docs/remote/containers">dev containers</a> for common programming languages <br /> and technology stacks to boost your developer productivity 🚀
     <br />
     <br />
     <a href="https://github.com/manekinekko/awesome-devcontainers/issues">Report an issue</a>
@@ -42,7 +42,7 @@
 ### Tools
 
 - [VS Code Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
-- [Unofficial devcontainer CLI](https://github.com/stuartleeks/devcontainer-cli) - An experimental CLI to improve the experience of working with Visual Studio Code devcontainers.
+- [Unofficial devcontainer CLI](https://github.com/stuartleeks/devcontainer-cli) - An experimental CLI to improve the experience of working with Visual Studio Code dev containers.
 - [devcontainer-build-run](https://github.com/stuartleeks/devcontainer-build-run) - A GitHub action and Azure DevOps task aimed at making it easier to re-use a Visual Studio Code devcontainer in a GitHub workflow or Azure DevOps pipeline.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -50,7 +50,7 @@
 ### Articles
 
 - [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers) - Visual Studio Code Remote Containers official documentation.
-- [Your open source project needs a devcontainer. Here is why](https://www.aaron-powell.com/posts/2021-03-08-your-open-source-project-needs-a-dev-container-heres-why/) - Devcontainers are awesome, we can use them to define an isolated development environment within Docker that has all that we need, and only what we need, installed in it.
+- [Your open source project needs a devcontainer. Here is why](https://www.aaron-powell.com/posts/2021-03-08-your-open-source-project-needs-a-dev-container-heres-why/) - Dev containers are awesome, we can use them to define an isolated development environment within Docker that has all that we need, and only what we need, installed in it.
 - [Instantly set up a new dev environment using containers and VS Code](https://dev.to/itnext/instantly-set-up-a-new-dev-environment-using-containers-and-vs-code-51g8) - Discover how to get started in seconds on a new project, isolate all your dev environments and share them with your teammates using VS Code dev containers.
 - [Use local storage emulator in remote container](https://www.maneu.net/blog/use-local-storage-emulator-remote-container/) - A quick tip about using local resources (like databases) from within a remote container.
 - [Development Containers in Education: A Guide for Instructors](https://code.visualstudio.com/blogs/2020/07/27/containers-edu) - Development containers with Visual Studio Code can serve as a fantastic tool in education to ensure students have a consistent coding environment. They take care of setup so that students and instructors can quickly move past configuration, and instead focus on what's truly important: learning and coding something great!
