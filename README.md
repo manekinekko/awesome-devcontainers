@@ -26,6 +26,7 @@
 
 - [Tools](#tools)
 - [Articles](#articles)
+- [Tutorials](#tutorials)
 - [Videos](#videos)
 - [Samples](#samples)
   - [C/C++](#cc)
@@ -60,7 +61,7 @@
 
 ### Tutorials
 
-- [Use a Docker container as a development environment with Visual Studio Code](https://docs.microsoft.com/en-us/learn/modules/use-docker-container-dev-env-vs-code/?WT.mc_id=devcloud-11496-cxa) - Get, create, and configure a container-based development environment with the Visual Studio Code Remote - Containers extension
+- [Use a Docker container as a development environment with Visual Studio Code](https://docs.microsoft.com/en-us/learn/modules/use-docker-container-dev-env-vs-code/?WT.mc_id=devcloud-11496-cxa) - Get, create, and configure a container-based development environment with the Visual Studio Code Remote - Containers extension.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
