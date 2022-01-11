@@ -58,6 +58,12 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Tutorials
+
+- [Use a Docker container as a development environment with Visual Studio Code](https://docs.microsoft.com/en-us/learn/modules/use-docker-container-dev-env-vs-code/?WT.mc_id=devcloud-11496-cxa) - Get, create, and configure a container-based development environment with the Visual Studio Code Remote - Containers extension
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Videos
 
 - [GitHub Codespaces - A Game Changer](https://www.youtube.com/watch?v=B_gtLXvDQhE) - In this demo, Alvaro Videla makes the RabbitMQ tutorials "Codespaces ready" and ran them directly from the browser without the need to install RabbitMQ or Node.js.
