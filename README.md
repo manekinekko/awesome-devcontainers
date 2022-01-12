@@ -56,6 +56,7 @@
 - [Use local storage emulator in remote container](https://www.maneu.net/blog/use-local-storage-emulator-remote-container/) - A quick tip about using local resources (like databases) from within a remote container.
 - [Development Containers in Education: A Guide for Instructors](https://code.visualstudio.com/blogs/2020/07/27/containers-edu) - Development containers with Visual Studio Code can serve as a fantastic tool in education to ensure students have a consistent coding environment. They take care of setup so that students and instructors can quickly move past configuration, and instead focus on what's truly important: learning and coding something great!
 - [Using Remote Containers in WSL 2](https://code.visualstudio.com/blogs/2020/07/01/containers-wsl) - See how you can use remote containers in Windows Subsystem for Linux 2 (WSL 2).
+- [Awesome tips to go further with Dev Containers](https://microsoft.github.io/code-with-engineering-playbook/developer-experience/going-further/) - a list of tips to enhance your Dev Containers to support Apple M1, include various tooling or let developers do *some* customizations.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
