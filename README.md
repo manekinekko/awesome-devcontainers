@@ -74,31 +74,39 @@
 ### C/C++
 
 - [Try Out Development Containers: C++](https://github.com/microsoft/vscode-remote-try-cpp) - C++ sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [C++ image](https://github.com/devcontainers/images/tree/main/src/cpp) - Develop C++ applications on Linux. Includes Debian C++ build tools (maintained by Microsoft).
 
 ### Go
 
 - [Go Dev Container](https://github.com/qdm12/godevcontainer) - Ultimate Go development container for Visual Studio Code.
 - [Try Out Development Containers: Go](https://github.com/microsoft/vscode-remote-try-go) - Go sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [Go image](https://github.com/devcontainers/images/tree/main/src/go) - Develop Go based applications. Includes appropriate runtime args, Go, common tools, extensions, and dependencies (maintained by Microsoft).
 
 ### Java
 
 - [Try Out Development Containers: Java](https://github.com/microsoft/vscode-remote-try-java) - Java sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [Java image](https://github.com/devcontainers/images/tree/main/src/java) - Develop Java applications. Includes the JDK and Java extensions (maintained by Microsoft).
 
 ### .NET
 
 - [Try Out Development Containers: .NET Core](https://github.com/microsoft/vscode-remote-try-dotnetcore) - .NET Core sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [.NET image](https://github.com/devcontainers/images/tree/main/src/dotnet) - Develop C# and .NET based applications. Includes all needed SDKs, extensions, and dependencies (maintained by Microsoft).
 
 ### Node.js
 
 - [Try Out Development Containers: Node.js](https://github.com/microsoft/vscode-remote-try-node) - Node.js sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [Node.js image w/ JavaScript](https://github.com/devcontainers/images/tree/main/src/javascript-node) - Develop Node.js based applications. Includes Node.js, eslint, nvm, and yarn (maintained by Microsoft).
+- [Node.js image w/ TypeScript](https://github.com/devcontainers/images/tree/main/src/typescript-node) - Develop Node.js based applications in TypeScript. Includes Node.js, eslint, nvm, yarn, and the TypeScript compiler (maintained by Microsoft).
 
 ### PHP
 
 - [Try Out Development Containers: PHP](https://github.com/microsoft/vscode-remote-try-php) - PHP sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [PHP image](https://github.com/devcontainers/images/tree/main/src/php) - Develop PHP based applications. Includes needed tools, extensions, and dependencies (maintained by Microsoft).
 
 ### Python
 
 - [Try Out Development Containers: Python](https://github.com/microsoft/vscode-remote-try-python) - Python sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [Python image](https://github.com/devcontainers/images/tree/main/src/python) - Develop Python 3 applications (maintained by Microsoft).
 
 ### Ruby
 
@@ -107,6 +115,7 @@
 ### Rust
 
 - [Try Out Development Containers: Rust](https://github.com/microsoft/vscode-remote-try-rust) - Rust sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [Rust image](https://github.com/devcontainers/images/tree/main/src/rust) - Develop Rust based applications. Includes appropriate runtime args and everything you need to get up and running (maintained by Microsoft).
 
 ### Misc
 
