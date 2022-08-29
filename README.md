@@ -103,7 +103,7 @@
 
 ### Ruby
 
-- [Try Out Development Containers: Ruby](https://github.com/microsoft/vscode-remote-try-ruby) - Ruby sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
+- [Try Out Development Containers: Ruby](https://github.com/devcontainers/images/tree/main/src/ruby) - Ruby sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
 
 ### Rust
 
