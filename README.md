@@ -1,3 +1,6 @@
+<!-- prettier-ignore -->
+↖️ Click <img height="16" valign="middle" src="https://i.imgur.com/yFtQXvN.png" /> for TOC
+
 # Awesome Dev Containers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <div id="top"></div>
