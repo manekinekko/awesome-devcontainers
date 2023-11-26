@@ -39,7 +39,8 @@
 - [VS Code Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
 - [Unofficial devcontainer CLI](https://github.com/stuartleeks/devcontainer-cli) - An experimental CLI to improve the experience of working with Visual Studio Code dev containers.
 - [devcontainer-build-run](https://github.com/stuartleeks/devcontainer-build-run) - A GitHub action and Azure DevOps task aimed at making it easier to re-use a Visual Studio Code devcontainer in a GitHub workflow or Azure DevOps pipeline.
-- [vscli](https://github.com/michidk/vscli) - A CLI/TUI which makes it easy to launch vscode projects from the terminal, with a focus on dev containers. Also supports projects with multiple dev containers. 
+- [vscli](https://github.com/michidk/vscli) - A CLI/TUI which makes it easy to launch vscode projects from the terminal, with a focus on dev containers. Also supports projects with multiple dev containers.
+- 👔 [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
