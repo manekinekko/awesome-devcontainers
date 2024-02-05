@@ -41,6 +41,7 @@
 - [devcontainer-build-run](https://github.com/stuartleeks/devcontainer-build-run) - A GitHub action and Azure DevOps task aimed at making it easier to re-use a Visual Studio Code devcontainer in a GitHub workflow or Azure DevOps pipeline.
 - [vscli](https://github.com/michidk/vscli) - A CLI/TUI which makes it easy to launch vscode projects from the terminal, with a focus on dev containers. Also supports projects with multiple dev containers.
 - 👔 [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
+- [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
