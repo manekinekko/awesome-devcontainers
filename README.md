@@ -110,6 +110,13 @@
 
 - [Try Out Development Containers: Python](https://github.com/microsoft/vscode-remote-try-python) - Python sample project for trying out the VS Code Remote - Containers extension (maintained by Microsoft).
 - [Python image](https://github.com/devcontainers/images/tree/main/src/python) - Develop Python 3 applications (maintained by Microsoft).
+- [Python Project Template](https://github.com/pamelafox/python-project-template): A Dev Container with support for black, isort, ruff, pre-commit, pytest
+- [SQLAlchemy SQLIte Playground](https://github.com/pamelafox/sqlalchemy-sqlite-playground): Dev Container with SQLAlchemy package, SQLTools extension
+- [PostgreSQL playground](https://github.com/pamelafox/postgresql-playground): Similar to the SQLite playground, but includes local PostgreSQL setup in Dev Container
+- [PostgreSQL + pgvector playground](https://github.com/pamelafox/pgvector-playground): Dev Container with PostgreSQL, pgvector extension, and multiple pgvector Python examples
+- [python 3.10 playground](https://github.com/pamelafox/python-3.10-playground): A simple 3.10 Dev Container
+- [python 3.11 playground](https://github.com/pamelafox/python-3.11-playground): A simple 3.11 Dev Container
+- [python 3.12 playground](https://github.com/pamelafox/python-3.12-playground): A simple 3.12 Dev Container
 
 ### Ruby
 
