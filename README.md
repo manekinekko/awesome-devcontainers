@@ -43,6 +43,7 @@
 - 👔 [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
 - [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 - [crib](https://fgrehm.github.io/crib) - A lean devcontainer runner that shells out to Docker/Podman. Single binary, no SSH, just `docker exec`, with experimental support for plugins.
+- [submission-site-discovery](https://github.com/SeeleAI/submission-site-discovery) - Automated discovery of product submission sites, launch directories, and distribution channels for indie hackers.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
