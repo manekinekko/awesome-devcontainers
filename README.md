@@ -43,6 +43,7 @@
 - 👔 [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
 - [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 - [crib](https://fgrehm.github.io/crib) - A lean devcontainer runner that shells out to Docker/Podman. Single binary, no SSH, just `docker exec`, with experimental support for plugins.
+- [guardian-agent-prompts](https://github.com/milkomida77/guardian-agent-prompts) - 49 production-tested AI agent system prompts for dev container workflow orchestration, automated development environment management, and multi-agent coordination. MIT licensed.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
