@@ -8,6 +8,7 @@
   </a>
   <p align="center">
     A curated list of awesome tools and resources about <a href="https://code.visualstudio.com/docs/remote/containers">dev containers</a> for common programming languages <br /> and technology stacks to boost your developer productivity 🚀
+- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
     <br />
     <br />
     <a href="https://github.com/manekinekko/awesome-devcontainers/issues">Report an issue</a>
