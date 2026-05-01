@@ -8,7 +8,6 @@
   </a>
   <p align="center">
     A curated list of awesome tools and resources about <a href="https://code.visualstudio.com/docs/remote/containers">dev containers</a> for common programming languages <br /> and technology stacks to boost your developer productivity 🚀
-- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
     <br />
     <br />
     <a href="https://github.com/manekinekko/awesome-devcontainers/issues">Report an issue</a>
@@ -44,6 +43,7 @@
 - 👔 [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
 - [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 - [crib](https://fgrehm.github.io/crib) - A lean devcontainer runner that shells out to Docker/Podman. Single binary, no SSH, just `docker exec`, with experimental support for plugins.
+- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
