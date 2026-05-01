@@ -8,7 +8,6 @@
   </a>
   <p align="center">
     A curated list of awesome tools and resources about <a href="https://code.visualstudio.com/docs/remote/containers">dev containers</a> for common programming languages <br /> and technology stacks to boost your developer productivity 🚀
-- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
     <br />
     <br />
     <a href="https://github.com/manekinekko/awesome-devcontainers/issues">Report an issue</a>
@@ -41,9 +40,10 @@
 - [Unofficial devcontainer CLI](https://github.com/stuartleeks/devcontainer-cli) - An experimental CLI to improve the experience of working with Visual Studio Code dev containers.
 - [devcontainer-build-run](https://github.com/stuartleeks/devcontainer-build-run) - A GitHub action and Azure DevOps task aimed at making it easier to re-use a Visual Studio Code devcontainer in a GitHub workflow or Azure DevOps pipeline.
 - [vscli](https://github.com/michidk/vscli) - A CLI/TUI which makes it easy to launch vscode projects from the terminal, with a focus on dev containers. Also supports projects with multiple dev containers.
-- 👔 [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
+- [tyedev](https://github.com/CodeMan99/tyedev) - Improve Devcontainer Creation - An interactive experience for the creation of a devcontainer. Provides ability to search for [features](https://containers.dev/features) and [templates](https://containers.dev/templates). And more!
 - [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 - [crib](https://fgrehm.github.io/crib) - A lean devcontainer runner that shells out to Docker/Podman. Single binary, no SSH, just `docker exec`, with experimental support for plugins.
+- [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
