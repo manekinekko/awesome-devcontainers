@@ -44,6 +44,7 @@
 - [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 - [crib](https://fgrehm.github.io/crib) - A lean devcontainer runner that shells out to Docker/Podman. Single binary, no SSH, just `docker exec`, with experimental support for plugins.
 - [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
+- [mirabilis](https://github.com/AlexShchuka/mirabilis) - One-command launcher that runs Claude Code fully autonomously in an isolated Docker dev container — cross-platform (macOS/Linux/WSL2), with a terminal UI and persistent agent memory.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
