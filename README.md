@@ -46,6 +46,7 @@
 - [KubeStellar Console](https://github.com/kubestellar/console) - Multi-cluster Kubernetes dashboard with AI-powered operations, real-time observability, and CNCF project integrations across edge and cloud clusters.
 - [aicontainer](https://github.com/stefanoginella/aicontainer) - A CLI that drops a sandboxed dev container into any project for running AI coding agents (Claude Code, Codex) in auto-approve mode, with filesystem isolation, a filtered Docker socket, and an opt-in outbound firewall.
 - [mirabilis](https://github.com/AlexShchuka/mirabilis) - One-command launcher that runs Claude Code fully autonomously in an isolated Docker dev container — cross-platform (macOS/Linux/WSL2), with a terminal UI and persistent agent memory.
+- [Devsy](https://github.com/devsy-org/devsy/) | [devsy.sh](https://devsy.sh/) - Accelerate engineering velocity with Devsy, a workspace management tool for deploying devcontainers on Docker, Kubernetes, cloud providers (e.g., AWS, GCP, Azure, and more), and SSH remote hosts.
 - [decolint](https://github.com/bare-devcontainer/decolint) - A linter for Dev Container definitions, Features, and Templates, with checks for correctness, security, and reproducibility. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
