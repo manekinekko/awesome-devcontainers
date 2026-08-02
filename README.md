@@ -50,6 +50,7 @@
 - [decolint](https://github.com/bare-devcontainer/decolint) - A linter for Dev Container definitions, Features, and Templates, with checks for correctness, security, and reproducibility. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+- [WeekLife](https://letmethink.cc/app/weeklife/) - A lightweight life check-in tool for reclaiming everyday life beyond work.
 
 ## Articles
 
