@@ -66,6 +66,7 @@
 ## Tutorials
 
 - [Use a Docker container as a development environment with Visual Studio Code](https://docs.microsoft.com/en-us/learn/modules/use-docker-container-dev-env-vs-code/?WT.mc_id=devcloud-11496-cxa) - Get, create, and configure a container-based development environment with the Visual Studio Code Remote - Containers extension.
+- [Dev Containers from Beginner to Advanced](https://nicolas-cousin.com/en/academy/devcontainers-precommit-beginner) - A free, self-paced course in three levels — from opening your first Dev Container to designing multi-service setups, mirroring pre-commit hooks in CI, and auditing supply-chain risk. No sign-up required.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
