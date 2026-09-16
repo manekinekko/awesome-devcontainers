@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { runInNewContext } from "node:vm";
 import { categories, escapeHtml, parseResources, serializeData } from "../scripts/resources.mjs";
 import { filtersUrl, readFilters, selectResources, starterUrls } from "../website/catalog.mjs";
+import { updateGitHubStars } from "../website/github-stars.mjs";
 import { buildSite } from "../scripts/build.mjs";
 
 const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
@@ -137,6 +138,140 @@ test("both palettes meet AA contrast for text and primary buttons", async () => 
   }
 });
 
+function setLinkAttribute(name, value) {
+  this[name] = value;
+}
+
+function githubHeader() {
+  return {
+    link: {
+      href: "https://github.com/manekinekko/awesome-devcontainers",
+      "aria-label": "View on GitHub (opens in a new tab)",
+      title: "",
+      dataset: {},
+      setAttribute: setLinkAttribute,
+    },
+    countElement: { textContent: "" },
+  };
+}
+
+test("GitHub stars format valid counts, including zero, with an exact accessible label", async (t) => {
+  const requests = [];
+  let count;
+  t.mock.method(globalThis, "fetch", async (url, options) => {
+    requests.push({ url, options });
+    return { ok: true, json: async () => ({ stargazers_count: count }) };
+  });
+  const warn = t.mock.method(console, "warn", () => {});
+  t.mock.timers.enable({ apis: ["setTimeout"] });
+  for (const [value, visible, full] of [
+    [0, "0", "0 stars"],
+    [1, "1", "1 star"],
+    [999, "999", "999 stars"],
+    [1234, "1.23K", "1,234 stars"],
+    [12345, "12.3K", "12,345 stars"],
+    [1234567, "1.23M", "1,234,567 stars"],
+    [Number.MAX_SAFE_INTEGER, "9010T", "9,007,199,254,740,991 stars"],
+  ]) {
+    count = value;
+    const { link, countElement } = githubHeader();
+    await updateGitHubStars(link, countElement);
+    assert.equal(countElement.textContent, visible);
+    assert.equal(link.dataset.starsLoaded, "true");
+    assert.equal(link["aria-label"], `View on GitHub: manekinekko/awesome-devcontainers, ${full} (opens in a new tab)`);
+    assert.equal(link.title, `${full} on GitHub`);
+    assert.equal(link.href, "https://github.com/manekinekko/awesome-devcontainers");
+  }
+  t.mock.timers.tick(5000);
+  for (const { url, options } of requests) {
+    assert.equal(url, "https://api.github.com/repos/manekinekko/awesome-devcontainers");
+    assert.deepEqual(options.headers, { Accept: "application/vnd.github+json" });
+    assert.equal(options.credentials, "omit");
+    assert.equal(options.signal.aborted, false, "clears the timeout after success");
+  }
+  assert.equal(warn.mock.callCount(), 0);
+});
+
+test("GitHub stars reject malformed payloads without inventing a count or changing the link", async (t) => {
+  let payload;
+  t.mock.method(globalThis, "fetch", async () => ({ ok: true, json: async () => payload }));
+  const warn = t.mock.method(console, "warn", () => {});
+  const invalid = [null, {}, [], "invalid",
+    ...[undefined, null, "123", true, -1, 1.5, NaN, Infinity, Number.MAX_SAFE_INTEGER + 1]
+      .map((stargazers_count) => ({ stargazers_count }))];
+  for (payload of invalid) {
+    const header = githubHeader();
+    await updateGitHubStars(header.link, header.countElement);
+    assert.deepEqual(header, githubHeader());
+  }
+  assert.equal(warn.mock.callCount(), invalid.length);
+  for (const { arguments: [message, error] } of warn.mock.calls) {
+    assert.match(message, /GitHub star count unavailable/);
+    assert.match(error.message, /invalid stargazers_count; expected a nonnegative safe integer/);
+  }
+});
+
+test("GitHub stars handle HTTP, network, and JSON errors with a precise warning", async (t) => {
+  const networkError = new TypeError("Failed to fetch");
+  const jsonError = new SyntaxError("Unexpected token in JSON");
+  const scenarios = [
+    ...[403, 404, 429, 500].map((status) => ({
+      fetch: async () => ({ ok: false, status, json() { assert.fail("must not parse an HTTP error"); } }),
+      message: `GitHub API returned HTTP ${status}.`,
+    })),
+    { fetch: async () => { throw networkError; }, message: networkError.message },
+    { fetch: async () => ({ ok: true, json: async () => { throw jsonError; } }), message: jsonError.message },
+  ];
+  for (const scenario of scenarios) {
+    await t.test(scenario.message, async (t) => {
+      let signal;
+      t.mock.method(globalThis, "fetch", (url, options) => {
+        signal = options.signal;
+        return scenario.fetch();
+      });
+      const warn = t.mock.method(console, "warn", () => {});
+      t.mock.timers.enable({ apis: ["setTimeout"] });
+      const header = githubHeader();
+      await updateGitHubStars(header.link, header.countElement);
+      assert.deepEqual(header, githubHeader());
+      assert.equal(warn.mock.callCount(), 1);
+      assert.match(warn.mock.calls[0].arguments[0], /GitHub star count unavailable/);
+      assert.equal(warn.mock.calls[0].arguments[1].message, scenario.message);
+      t.mock.timers.tick(5000);
+      assert.equal(signal.aborted, false, "clears the timeout after failure");
+    });
+  }
+});
+
+test("GitHub stars abort a stalled request or response body after five seconds", async (t) => {
+  for (const phase of ["request", "body"]) {
+    await t.test(phase, async (t) => {
+      let signal;
+      t.mock.method(globalThis, "fetch", (url, options) => {
+        signal = options.signal;
+        const stalled = () => new Promise((resolve, reject) => {
+          signal.addEventListener("abort", () => reject(signal.reason), { once: true });
+        });
+        return phase === "request" ? stalled() : { ok: true, json: stalled };
+      });
+      const warn = t.mock.method(console, "warn", () => {});
+      t.mock.timers.enable({ apis: ["setTimeout"] });
+      const header = githubHeader();
+      const pending = updateGitHubStars(header.link, header.countElement);
+      await Promise.resolve();
+      t.mock.timers.tick(4999);
+      assert.equal(signal.aborted, false);
+      assert.deepEqual(header, githubHeader(), "keeps navigation available while the count is pending");
+      t.mock.timers.tick(1);
+      await pending;
+      assert.equal(signal.aborted, true);
+      assert.deepEqual(header, githubHeader());
+      assert.equal(warn.mock.callCount(), 1);
+      assert.match(warn.mock.calls[0].arguments[0], /GitHub star count request timed out after 5 seconds/);
+    });
+  }
+});
+
 test("build produces a self-contained, pre-rendered GitHub Pages site", async () => {
   const { output, count } = await buildSite();
   const html = await readFile(`${output}/index.html`, "utf8");
@@ -146,6 +281,14 @@ test("build produces a self-contained, pre-rendered GitHub Pages site", async ()
   assert.equal(/<script[^>]+src=/.test(html), false);
   assert.equal(/<link[^>]+rel="stylesheet"/.test(html), false);
   assert.equal(/(?:href|src)="\/[^/]/.test(html), false);
+  const githubLink = html.match(/<a class="github-link"[\s\S]*?<\/a>/)[0];
+  assert.match(githubLink, /href="https:\/\/github.com\/manekinekko\/awesome-devcontainers"/);
+  assert.match(githubLink, /aria-label="View on GitHub \(opens in a new tab\)"/);
+  assert.match(githubLink, /class="github-stars" aria-hidden="true"/);
+  assert.match(githubLink, /id="github-star-count"><\/span>/);
+  assert.doesNotMatch(githubLink, /data-stars-loaded/);
+  assert.match(html, /async function updateGitHubStars/);
+  assert.match(html, /render\(\);\nsyncTheme\(\);\nvoid updateGitHubStars\(document.getElementById\("github-link"\), document.getElementById\("github-star-count"\)\);\n<\/script>/);
   const data = html.match(/<script type="application\/json" id="resource-data">(.+)<\/script>/)[1];
   assert.deepEqual(JSON.parse(data), resources);
   const config = html.match(/<code id="config-code">([\s\S]*?)<\/code>/)[1].replace(/<[^>]+>/g, "");

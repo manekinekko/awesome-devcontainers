@@ -36,6 +36,7 @@
       <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
       <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
       <symbol id="icon-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7m12 5v-3.4a3 3 0 0 0-.8-2.3c2.8-.3 5.8-1.4 5.8-6.3A5 5 0 0 0 18.7 6a4.7 4.7 0 0 0-.1-3.3S17.5 2.4 15 4a13 13 0 0 0-6 0C6.5 2.4 5.4 2.7 5.4 2.7A4.7 4.7 0 0 0 5.3 6 5 5 0 0 0 4 9.3c0 4.9 3 6 5.8 6.3A3 3 0 0 0 9 18v3.3"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/></symbol>
       <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
       <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z"/></symbol>
       <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
@@ -67,9 +68,13 @@
         <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" hidden>
           <svg class="icon" aria-hidden="true"><use href="#icon-moon"></use></svg>
         </button>
-        <a class="github-link" href="https://github.com/manekinekko/awesome-devcontainers" target="_blank" rel="noopener noreferrer">
+        <a class="github-link" id="github-link" href="https://github.com/manekinekko/awesome-devcontainers" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub (opens in a new tab)">
           <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
-          <span>View on GitHub</span>
+          <span class="github-label">View on GitHub</span>
+          <span class="github-stars" aria-hidden="true">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <span class="github-star-count" id="github-star-count"></span>
+          </span>
           <svg class="icon external-icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
           <span class="sr-only"> (opens in a new tab)</span>
         </a>

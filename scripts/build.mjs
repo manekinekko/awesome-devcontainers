@@ -37,6 +37,7 @@ export async function buildSite() {
   const template = await read("website/index.html");
   const css = await read("website/site.css");
   const catalog = await read("website/catalog.mjs");
+  const githubStars = await read("website/github-stars.mjs");
   const app = await read("website/site.js");
   const resources = parseResources(markdown);
   const languages = [...new Set(resources.map((resource) => resource.language).filter(Boolean))];
@@ -61,7 +62,7 @@ export async function buildSite() {
     LANGUAGE_BUTTONS: languageButtons,
     CARDS: ordered.map(renderCard).join("\n"),
     RESOURCE_DATA: serializeData(resources),
-    SCRIPT: `${catalog.replace(/^export /gm, "")}\n${app}`,
+    SCRIPT: `${catalog.replace(/^export /gm, "")}\n${githubStars.replace(/^export /gm, "")}\n${app}`,
   };
   const html = template.replace(/\{\{([A-Z_]+)\}\}/g, (match, key) => {
     if (!(key in replacements)) throw new Error(`Unknown template token: ${match}`);
