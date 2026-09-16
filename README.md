@@ -36,6 +36,7 @@
 
 ## Tools
 
+- [Ivy Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril) - Open-source agentic software factory with an amazing UI that handles parallel Git worktrees for you, complete with programmatic verifications and fast review loops.
 - [VS Code Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) - An extension pack that lets you open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set.
 - [Unofficial devcontainer CLI](https://github.com/stuartleeks/devcontainer-cli) - An experimental CLI to improve the experience of working with Visual Studio Code dev containers.
 - [devcontainer-build-run](https://github.com/stuartleeks/devcontainer-build-run) - A GitHub action and Azure DevOps task aimed at making it easier to re-use a Visual Studio Code devcontainer in a GitHub workflow or Azure DevOps pipeline.
