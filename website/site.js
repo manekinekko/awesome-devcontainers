@@ -171,3 +171,4 @@ copyButton.addEventListener("click", async () => {
 
 render();
 syncTheme();
+void updateGitHubStars(document.getElementById("github-link"), document.getElementById("github-star-count"));

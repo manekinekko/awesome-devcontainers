@@ -174,7 +174,11 @@ npm run build
 
 The build produces `dist/index.html`, a self-contained static page with all
 resources, styles, icons, and scripts included. Resources remain readable without
-JavaScript. No analytics, third-party fonts, or runtime network requests are used.
+JavaScript. No analytics or third-party fonts are used. The header optionally
+fetches this repository's star count from the public GitHub API, without a token.
+This is the only runtime network request; it does not block the collection. If it
+fails or takes longer than five seconds, the count stays hidden and the GitHub
+link remains available.
 
 ### GitHub Pages
 

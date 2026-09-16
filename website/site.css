@@ -90,8 +90,12 @@ svg { display: inline-block; }
 .icon-button { display: inline-grid; place-items: center; border: 1px solid var(--cp-border); border-radius: .625rem; min-width: 44px; min-height: 44px; }
 .icon-button:hover { color: var(--cp-accent); border-color: var(--cp-accent); background: var(--cp-accent-soft); }
 .theme-toggle { border: 0; margin-inline: -12px; }
-.github-link { gap: 9px; }
+.github-link { gap: 9px; white-space: nowrap; }
 .github-link .external-icon { width: 14px; height: 14px; margin-left: 2px; }
+.github-stars { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-height: 28px; padding: 3px 6px; border: 1px solid var(--cp-border); border-radius: 6px; background: var(--cp-bg-elevated); color: var(--cp-accent); font-size: 12px; visibility: hidden; }
+.github-stars .icon { width: 14px; height: 14px; }
+.github-star-count { min-width: 5ch; text-align: center; font-variant-numeric: tabular-nums; }
+.github-link[data-stars-loaded] .github-stars { visibility: visible; }
 
 .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; padding-top: 56px; padding-bottom: 52px; align-items: center; }
 .eyebrow { font-size: 10px; letter-spacing: 1.65px; font-weight: 600; color: var(--cp-text-soft); display: flex; gap: 8px; align-items: center; line-height: 1.5; }
@@ -317,7 +321,7 @@ html[data-theme="dark"] .hero-description, html[data-theme="dark"] .resource-car
   .header-links { gap: 8px; }
   .header-links > a:not(.github-link) { display: none; }
   .github-link { min-width: 44px; justify-content: center; }
-  .github-link > span:not(.sr-only) { display: none; }
+  .github-link .github-label { display: none; }
   .theme-toggle { margin: 0; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 48px; padding-bottom: 48px; }
   .hero .eyebrow { font-size: 9px; letter-spacing: 1.4px; }
