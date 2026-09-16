@@ -33,6 +33,7 @@
   - [Ruby](#ruby)
   - [Rust](#rust)
   - [Misc](#misc)
+- [Website](#website)
 
 ## Tools
 
@@ -140,3 +141,48 @@
 - [ROS dev container for VS Code](https://github.com/devrt/ros-devcontainer-vscode) - A preconfigured docker image for ROS (Robot Operating System) development. Preconfigured code completion for C++, Python, XML (package.xml, launchfiles, URDF, SDF). Preconfigured simulation environments (Flatland, TurtleBot3, ARIAC, Virtual RobotX, UUV).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Website
+
+The website turns this list into a searchable collection with category and language
+filters, light and dark themes, and a quick-start guide. This README remains the
+source of truth: add or update resources here, and the next build includes them
+automatically.
+
+The Midnight & Amber palette pairs navy surfaces with ivory text in dark mode,
+and warm ivory surfaces with navy text in light mode. The header theme toggle
+remembers your choice locally; first-time visitors follow their system preference.
+Use `?scoutTheme=light` or `?scoutTheme=dark` to preview a specific mode.
+
+### Local development
+
+Use Node.js 22 or newer. No dependencies need to be installed.
+
+```sh
+npm run dev
+```
+
+Open `http://127.0.0.1:4173/awesome-devcontainers/`. Edit the files in `website/`
+or this README, run `npm run build`, and refresh the page. Set `PORT` to use a
+different local port.
+
+```sh
+npm test
+npm run build
+```
+
+The build produces `dist/index.html`, a self-contained static page with all
+resources, styles, icons, and scripts included. Resources remain readable without
+JavaScript. No analytics, third-party fonts, or runtime network requests are used.
+
+### GitHub Pages
+
+In the repository's **Settings > Pages > Build and deployment**, select
+**GitHub Actions** as the source. The workflow in
+`.github/workflows/pages.yml` builds and deploys the site when relevant changes
+reach `main`. Pull requests build and test the site without deploying it.
+You can also run the workflow manually from the Actions tab on `main`.
+
+The published URL will be `https://manekinekko.github.io/awesome-devcontainers/`.
+All local navigation is relative, so the site also supports a custom domain.
+Only `dist/` is uploaded to Pages.

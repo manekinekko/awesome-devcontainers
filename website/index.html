@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Less setup. More building. A community-curated collection of dev container tools, guides, videos, and ready-to-use environments for your next project.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awesome Dev Containers">
+  <meta property="og:description" content="Good environments make great beginnings. Find your next dev container, tool, or guide in the community-curated collection.">
+  <title>Awesome Dev Containers | Less setup. More building.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round' d='m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 10L3 7m9 5 9-5m-9 5v10M7.5 4.5l9 5v5'/%3E%3C/svg%3E">
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      let saved = "";
+      try {
+        saved = localStorage.getItem("awesome-devcontainers-theme") || "";
+      } catch (error) {
+        console.warn("Theme storage is unavailable; using the URL or system preference.", error);
+      }
+      document.documentElement.dataset.savedTheme = ["light", "dark"].includes(saved) ? saved : "";
+      const theme = ["light", "dark"].includes(param) ? param
+        : document.documentElement.dataset.savedTheme
+          || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <style>{{STYLES}}</style>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to the collection</a>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5M12 12v10M7.5 4.5l9 5v5"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7m12 5v-3.4a3 3 0 0 0-.8-2.3c2.8-.3 5.8-1.4 5.8-6.3A5 5 0 0 0 18.7 6a4.7 4.7 0 0 0-.1-3.3S17.5 2.4 15 4a13 13 0 0 0-6 0C6.5 2.4 5.4 2.7 5.4 2.7A4.7 4.7 0 0 0 5.3 6 5 5 0 0 0 4 9.3c0 4.9 3 6 5.8 6.3A3 3 0 0 0 9 18v3.3"/></symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.9 13a9 9 0 0 1-9.9-9.9A9 9 0 1 0 20.9 13Z"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+      <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+      <symbol id="icon-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m6 8 4 4-4 4m7 0h5"/></symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9Zm0 0v7h7M7 13h10M7 17h7"/></symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1Zm0 0v15"/></symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m10 8 6 4-6 4Z"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m7 6-6 6 6 6m10-12 6 6-6 6M14 3l-4 18"/></symbol>
+      <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+      <symbol id="icon-box" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 5v10l9 4 9-4V8M12 13v9"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Awesome Dev Containers home">
+        <span class="brand-mark"><svg class="icon" aria-hidden="true"><use href="#icon-cube"></use></svg></span>
+        <span>awesome<span class="brand-secondary">devcontainers</span></span>
+      </a>
+      <nav class="header-links" aria-label="Main navigation">
+        <a class="collection-link" href="#collection">The collection</a>
+        <a href="#quick-start">Quick start</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" hidden>
+          <svg class="icon" aria-hidden="true"><use href="#icon-moon"></use></svg>
+        </button>
+        <a class="github-link" href="https://github.com/manekinekko/awesome-devcontainers" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+          <span>View on GitHub</span>
+          <svg class="icon external-icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          <span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> OPEN SOURCE. OPEN POSSIBILITIES.</p>
+        <h1 id="hero-title">Less setup.<br>More <span class="hero-accent">building.</span></h1>
+        <p class="hero-description">Great projects start with a great environment.<br class="desktop-break"> Find the tools, guides, and dev containers that get<br class="desktop-break"> you straight to the good part.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#collection">Explore the collection <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+          <a class="text-link" href="#quick-start">New to dev containers? <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg></a>
+        </div>
+        <div class="hero-note"><svg class="icon" aria-hidden="true"><use href="#icon-heart"></use></svg> Curated by developers. Made for everyone.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="diagram-label mono"><span>YOUR NEXT WORKSPACE</span><span>01 / READY TO BUILD</span></div>
+        <div class="editor-card">
+          <div class="editor-chrome">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="editor-path mono">.devcontainer/</span>
+            <svg class="icon" aria-hidden="true"><use href="#icon-cube"></use></svg>
+          </div>
+          <div class="editor-tab"><span class="json-mark mono">{ }</span><span>devcontainer.json</span><span class="tab-dot" aria-hidden="true"></span>
+            <button class="icon-button copy-button" id="copy-config" type="button" aria-label="Copy devcontainer configuration" title="Copy configuration" hidden><svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg></button>
+          </div>
+          <div class="code-content">
+            <pre class="line-numbers" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9</pre>
+            <pre><code id="config-code">{
+  <span class="code-key">"name"</span>: <span class="code-string">"My next big thing"</span>,
+  <span class="code-key">"image"</span>:
+    <span class="code-string">"mcr.microsoft.com/devcontainers/base:ubuntu"</span>,
+  <span class="code-key">"features"</span>: {
+    <span class="code-string">"ghcr.io/devcontainers/features/github-cli:1"</span>: {}
+  },
+  <span class="code-key">"forwardPorts"</span>: [<span class="code-number">3000</span>]
+}</code></pre>
+          </div>
+          <div class="editor-status"><span><span class="status-dot"></span> One config. A consistent environment.</span><span class="mono">JSON</span></div>
+        </div>
+        <div class="workspace-caption"><span class="connection-line" aria-hidden="true"></span><span class="workspace-badge"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Works on your machine. And theirs.</span></div>
+        <p id="copy-status" class="copy-status" role="status"></p>
+      </div>
+    </section>
+
+    <div class="collection-stats">
+      <div class="container stats-inner">
+        <p>A little less friction.<br><strong>A lot more possibility.</strong></p>
+        <div class="stat"><strong>{{RESOURCE_COUNT}}</strong><span>curated resources</span></div>
+        <div class="stat"><strong>{{LANGUAGE_COUNT}}</strong><span>sample categories</span></div>
+        <div class="stat"><strong>100%</strong><span>community curated</span></div>
+        <a href="https://github.com/manekinekko/awesome-devcontainers/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="stats-contribute">Built together.<br><span>Add your favorite <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg></span><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </div>
+
+    <section class="collection container" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GOOD STUFF, ALL IN ONE PLACE</p><h2 id="collection-title">Find your next head start<span class="accent-period">.</span></h2></div>
+        <span class="collection-index mono">THE COLLECTION / {{RESOURCE_COUNT}} RESOURCES</span>
+      </div>
+      <noscript><p class="noscript-note">All resources are listed below. Enable JavaScript for search, filters, and theme switching.</p></noscript>
+      <div class="catalog-layout">
+        <aside class="catalog-sidebar" aria-label="Resource filters" id="resource-filters" hidden>
+          <p class="sidebar-label mono">BROWSE BY CATEGORY</p>
+          <div class="category-list" role="group" aria-label="Categories">{{CATEGORY_BUTTONS}}</div>
+          <div class="language-section">
+            <p class="sidebar-label mono">PICK YOUR STACK</p>
+            <div class="language-list" role="group" aria-label="Sample languages">{{LANGUAGE_BUTTONS}}</div>
+          </div>
+          <div class="sidebar-note">
+            <svg class="icon" aria-hidden="true"><use href="#icon-box"></use></svg>
+            <h3>Your setup, shareable.</h3>
+            <p>A dev container packages your tools and settings so anyone can get started.</p>
+            <a class="text-link" href="#quick-start">See how it works <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+          </div>
+        </aside>
+        <div class="catalog-main">
+          <div class="search-controls" id="search-controls" hidden>
+            <label class="search-field" for="resource-search">
+              <svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg>
+              <span class="sr-only">Search resources</span>
+              <input id="resource-search" type="search" placeholder="Find a tool, a language, a little inspiration..." autocomplete="off" aria-controls="resource-grid" aria-keyshortcuts="/">
+              <kbd aria-hidden="true">/</kbd>
+            </label>
+          </div>
+          <div class="results-toolbar">
+            <p id="result-count" role="status" aria-live="polite" aria-atomic="true"><strong>All resources</strong><span>{{RESOURCE_COUNT}} things worth exploring</span></p>
+            <label class="sort-control" id="sort-control" hidden><span class="sr-only">Sort resources</span><select id="resource-sort"><option value="curated">Curated order</option><option value="az">Alphabetical</option></select><svg class="icon" aria-hidden="true"><use href="#icon-chevron"></use></svg></label>
+          </div>
+          <div class="active-filters" id="active-filters" hidden><span id="filter-description"></span><button type="button" id="clear-filters">Clear filters <svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg></button></div>
+          <div class="resource-grid" id="resource-grid">{{CARDS}}</div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span class="empty-icon"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg></span>
+            <h3>No matches. Still plenty to discover.</h3>
+            <p>Try a broader search, choose another category, or start fresh.</p>
+            <button type="button" class="button button-primary" id="reset-search">Show all resources <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+          </div>
+          <div class="load-more" id="load-more" hidden>
+            <p id="displayed-count" role="status" aria-live="polite"></p>
+            <button type="button" class="button" id="show-more">Explore more resources <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></button>
+          </div>
+          <div class="catalog-end"><span></span><p>Handpicked, not autogenerated.</p><svg class="icon" aria-hidden="true"><use href="#icon-cube"></use></svg><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-start" id="quick-start" aria-labelledby="quick-start-title">
+      <div class="container">
+        <div class="quick-start-heading"><div><p class="eyebrow">FROM "IT WORKS ON MY MACHINE" TO EVERY MACHINE</p><h2 id="quick-start-title">A fresh start, in three steps.</h2></div><a class="text-link" href="https://code.visualstudio.com/docs/devcontainers/containers" target="_blank" rel="noopener noreferrer">Read the full guide <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg><span class="sr-only"> (opens in a new tab)</span></a></div>
+        <div class="steps">
+          <article class="step"><span class="step-number mono">01</span><h3>Get the essentials.</h3><p>Install <a href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener noreferrer">Docker Desktop</a> and <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VS Code</a>, then add the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank" rel="noopener noreferrer">Dev Containers extension</a>.</p></article>
+          <article class="step"><span class="step-number mono">02</span><h3>Find your environment.</h3><p>Pick a sample for your stack, or save the example above as <code>.devcontainer/devcontainer.json</code> in your project.</p><a class="text-link" href="?category=Samples#collection" id="browse-samples">Browse the samples <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a></article>
+          <article class="step"><span class="step-number mono">03</span><h3>Open. Build. Repeat.</h3><p>Start Docker, open your project in VS Code, and run <code>Dev Containers: Reopen in Container</code> from the Command Palette.</p><span class="step-note"><span class="status-dot"></span> Your environment goes where you go.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contribute-section container" aria-labelledby="contribute-title">
+      <div class="contribute-art" aria-hidden="true"><svg class="icon"><use href="#icon-cube"></use></svg><span class="mono">+</span><svg class="icon"><use href="#icon-heart"></use></svg></div>
+      <h2 id="contribute-title">Found something awesome?</h2>
+      <p>The best collections are built together.<br>Share a useful tool, a great guide, or your go-to environment.</p>
+      <a class="button button-primary" href="https://github.com/manekinekko/awesome-devcontainers/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contribute a resource <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg><span class="sr-only"> (opens in a new tab)</span></a>
+      <span class="contribute-footnote">A small pull request can be someone's big head start.</span>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="./"><svg class="icon" aria-hidden="true"><use href="#icon-cube"></use></svg><span>awesome devcontainers</span></a>
+      <p>A community collection, maintained by <a href="https://github.com/manekinekko">Wassim Chegham</a>.</p>
+      <div><a href="https://github.com/manekinekko/awesome-devcontainers">GitHub</a><a href="https://github.com/manekinekko/awesome-devcontainers/issues">Suggest a resource <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg></a></div>
+    </div>
+  </footer>
+  <script type="application/json" id="resource-data">{{RESOURCE_DATA}}</script>
+  <script type="module">{{SCRIPT}}</script>
+</body>
+</html>
