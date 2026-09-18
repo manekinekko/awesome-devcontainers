@@ -1,4 +1,4 @@
-export const categories = ["Tools", "Articles", "Tutorials", "Videos", "Samples"];
+export const categories = ["Tools", "Articles", "Tutorials", "Videos", "Samples", "AI"];
 
 export function plainText(markdown) {
   return markdown

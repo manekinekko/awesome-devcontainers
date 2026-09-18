@@ -51,6 +51,33 @@ test("filters by category, language, and all case-insensitive search terms", () 
   assert.equal(selectResources(resources, { ...defaults, query: "no-such-resource-123" }).length, 0);
 });
 
+test("AI resources distinguish existing devcontainers from suggested stacks", () => {
+  const ai = selectResources(resources, { ...defaults, category: "AI" });
+  const recipes = ai.filter((resource) => resource.title.endsWith("(stack recipe)"));
+  assert.equal(ai.length, 11);
+  assert.equal(recipes.length, 6);
+  assert.ok(ai.every((resource) => resource.category === "AI" && resource.language === ""));
+  assert.ok(recipes.every((resource) => resource.description.startsWith("Suggested stack:")));
+  assert.equal(resources.filter((resource) => resource.url === "https://github.com/pamelafox/pgvector-playground").length, 1);
+  const pytorch = ai.find((resource) => resource.title === "PyTorch CPU/CUDA Devcontainers");
+  assert.match(pytorch.description, /contributing to PyTorch itself/);
+  const ollama = ai.find((resource) => resource.title === "Local LLM with Ollama (stack recipe)");
+  assert.match(ollama.description, /macOS.*host rather than inside Docker Desktop/);
+});
+
+test("AI category deep links preserve search and sorting without a sample language", () => {
+  const state = { ...defaults, category: "AI", query: "MCP Inspector", sort: "az" };
+  const url = filtersUrl("https://manekinekko.github.io/awesome-devcontainers/?scoutTheme=dark#collection", state);
+  assert.equal(url.pathname, "/awesome-devcontainers/");
+  assert.equal(url.searchParams.get("category"), "AI");
+  assert.equal(url.searchParams.get("scoutTheme"), "dark");
+  assert.equal(url.hash, "#collection");
+  assert.deepEqual(readFilters(url.search, resources), state);
+  assert.deepEqual(readFilters(`${url.search}&language=Python`, resources), state);
+  const selected = selectResources(resources, state);
+  assert.deepEqual(selected.map((resource) => resource.title), ["MCP Development Lab (stack recipe)"]);
+});
+
 test("alphabetical sorting is deterministic and does not mutate the source", () => {
   const original = resources.map((resource) => resource.id);
   const sorted = selectResources(resources, { ...defaults, sort: "az" });
@@ -281,6 +308,17 @@ test("build produces a self-contained, pre-rendered GitHub Pages site", async ()
   assert.equal(/<script[^>]+src=/.test(html), false);
   assert.equal(/<link[^>]+rel="stylesheet"/.test(html), false);
   assert.equal(/(?:href|src)="\/[^/]/.test(html), false);
+  const aiCount = resources.filter((resource) => resource.category === "AI").length;
+  const aiButton = html.match(/<button[^>]+data-category="AI"[^>]*>[\s\S]*?<\/button>/)?.[0];
+  assert.ok(aiButton, "renders the AI category filter");
+  assert.match(aiButton, /aria-pressed="false"/);
+  assert.match(aiButton, /href="#icon-cpu"/);
+  assert.ok(aiButton.includes(`<span class="category-count">${aiCount}</span>`));
+  assert.equal((html.match(/<span class="card-kind">AI<\/span>/g) || []).length, aiCount);
+  const symbols = new Set([...html.matchAll(/<symbol id="([^"]+)"/g)].map((match) => match[1]));
+  for (const [, name] of html.matchAll(/<use href="#([^"]+)"/g)) {
+    assert.ok(symbols.has(name), `defines the ${name} icon`);
+  }
   const githubLink = html.match(/<a class="github-link"[\s\S]*?<\/a>/)[0];
   assert.match(githubLink, /href="https:\/\/github.com\/manekinekko\/awesome-devcontainers"/);
   assert.match(githubLink, /aria-label="View on GitHub \(opens in a new tab\)"/);

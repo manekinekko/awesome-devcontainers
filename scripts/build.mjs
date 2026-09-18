@@ -7,7 +7,7 @@ import { selectResources, starterUrls } from "../website/catalog.mjs";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const iconNames = {
   All: "grid", Tools: "terminal", Articles: "file", Tutorials: "book",
-  Videos: "play", Samples: "code",
+  Videos: "play", Samples: "code", AI: "cpu",
 };
 const icon = (name, className = "") =>
   `<svg class="icon ${className}" aria-hidden="true"><use href="#icon-${name}"></use></svg>`;

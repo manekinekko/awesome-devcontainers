@@ -33,6 +33,9 @@
   - [Ruby](#ruby)
   - [Rust](#rust)
   - [Misc](#misc)
+- [AI](#ai)
+  - [AI devcontainers](#ai-devcontainers)
+  - [AI stack recipes](#ai-stack-recipes)
 - [Website](#website)
 
 ## Tools
@@ -140,6 +143,33 @@
 ### Misc
 
 - [ROS dev container for VS Code](https://github.com/devrt/ros-devcontainer-vscode) - A preconfigured docker image for ROS (Robot Operating System) development. Preconfigured code completion for C++, Python, XML (package.xml, launchfiles, URDF, SDF). Preconfigured simulation environments (Flatland, TurtleBot3, ARIAC, Virtual RobotX, UUV).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## AI
+
+Development environments for AI applications, agents, data science, and model development. Existing devcontainers are listed separately from suggested stacks that need a custom configuration.
+
+### AI devcontainers
+
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners/tree/main/.devcontainer) - Microsoft's devcontainer for learning LLM application development with Python, Jupyter notebooks, model APIs, and course dependencies.
+- [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners/tree/main/.devcontainer) - Microsoft's agent-development course environment with Python, Node.js, .NET, and notebook support. Includes Microsoft Agent Framework and MCP SDK dependencies for agent and tool-calling examples.
+- [Jupyter Data Science Notebooks](https://github.com/devcontainers-community/templates-jupyter-datascience-notebooks) - Community devcontainer template based on Jupyter Docker Stacks, with selectable base images for dataset exploration, preprocessing, visualization, and machine learning.
+- [Data Science with Python and R](https://github.com/microsoft/datascience-py-r) - Microsoft's Python, R, and Jupyter development environment for statistics and notebook-based experimentation. The published image is documented as x86-64.
+- [PyTorch CPU/CUDA Devcontainers](https://github.com/pytorch/pytorch/tree/main/.devcontainer) - PyTorch's CPU and CUDA development configurations for building, debugging, and contributing to PyTorch itself, rather than a lightweight model-training starter. CUDA usage requires compatible NVIDIA hardware, drivers, and the NVIDIA Container Toolkit.
+
+For embeddings, semantic search, and PostgreSQL-backed retrieval-augmented generation (RAG), see the PostgreSQL + pgvector playground in the [Python samples](#python).
+
+### AI stack recipes
+
+These are suggested combinations of tools, not ready-made devcontainer templates. Each link points to upstream documentation for building a custom environment. Use Docker Compose to keep databases and inference services separate from the development workspace.
+
+- [TypeScript AI App (stack recipe)](https://ai-sdk.dev/docs/introduction) - Suggested stack: Node.js, TypeScript, pnpm, and AI SDK for streaming chat, structured outputs, and tool-calling applications. Hosted model APIs do not require a local GPU.
+- [MCP Development Lab (stack recipe)](https://modelcontextprotocol.io/docs/tools/inspector) - Suggested stack: a Python or TypeScript Model Context Protocol SDK, Node.js, and MCP Inspector for creating and debugging servers, tools, resources, and prompts.
+- [Local LLM with Ollama (stack recipe)](https://docs.ollama.com/docker) - Suggested stack: a Python or Node.js workspace, an Ollama service container, and persistent model storage for local inference on CPU or supported GPUs. For GPU acceleration on macOS, run Ollama on the host rather than inside Docker Desktop.
+- [Hugging Face Fine-Tuning (stack recipe)](https://huggingface.co/docs/peft/main/en/quicktour) - Suggested stack: PyTorch, Transformers, Datasets, Accelerate, and PEFT, optionally with TRL, for reproducible fine-tuning and LoRA experiments. A compatible GPU is recommended for practical LLM workloads.
+- [vLLM Inference Lab (stack recipe)](https://docs.vllm.ai/en/stable/deployment/docker/) - Suggested stack: a Python development workspace, a vLLM service, and client benchmarks for OpenAI-compatible model serving, batching, and throughput experiments. Choose the service image and runtime configuration for the host's supported hardware.
+- [LLM Evaluation Lab (stack recipe)](https://www.promptfoo.dev/docs/intro/) - Suggested stack: Node.js, Python, promptfoo, and versioned evaluation datasets for comparing prompts and models, checking outputs, and catching quality regressions in CI. Hosted model evaluation does not require a local GPU.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
