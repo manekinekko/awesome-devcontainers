@@ -54,6 +54,7 @@
 - [Devsy](https://github.com/devsy-org/devsy/) | [devsy.sh](https://devsy.sh/) - Accelerate engineering velocity with Devsy, a workspace management tool for deploying devcontainers on Docker, Kubernetes, cloud providers (e.g., AWS, GCP, Azure, and more), and SSH remote hosts.
 - [decolint](https://github.com/bare-devcontainer/decolint) - A linter for Dev Container definitions, Features, and Templates, with checks for correctness, security, and reproducibility. 
 - [devcontainer-devops](https://github.com/dbhq-uk/devcontainer-devops) - A DevOps and Infrastructure-as-Code dev container (Terraform, Terragrunt, Azure CLI, Ansible, Kubernetes, PowerShell, .NET) with a `ws` command that opens several repositories as roots of one multi-root workspace in a single container.
+- [Flisk](https://github.com/flisk-sh/flisk) - Generate and run your whole tech stack without the setup pain. One command from empty folder to running stack.
 - [AGRO](https://github.com/mifunedev/agro) - A CLI that creates a durable Docker dev container workspace for AI coding agents on a laptop or remote VM, installs Claude Code, Codex, Pi, OpenCode, and other harnesses on demand, gives parallel agents separate git worktrees, and supports attaching from VS Code Dev Containers.
 - [Mode VC Founder Capital & Equity Workbench](https://modevc.com/tools/) - 18 free browser-side startup calculators for founders: SAFE & option pool dilution, 409A strike price, ISO vs. NSO AMT tax, Venture Debt vs. Equity, ESOP grants, and LLM/GPU unit economics.
 
