@@ -58,6 +58,7 @@
 - [AGRO](https://github.com/mifunedev/agro) - A CLI that creates a durable Docker dev container workspace for AI coding agents on a laptop or remote VM, installs Claude Code, Codex, Pi, OpenCode, and other harnesses on demand, gives parallel agents separate git worktrees, and supports attaching from VS Code Dev Containers.
 - [Mode VC Founder Capital & Equity Workbench](https://modevc.com/tools/) - 18 free browser-side startup calculators for founders: SAFE & option pool dilution, 409A strike price, ISO vs. NSO AMT tax, Venture Debt vs. Equity, ESOP grants, and LLM/GPU unit economics.
 - [dtshim](https://github.com/korableg/dtshim) - Run host commands from inside a dev container: a symlinked client forwards args, env, and stdin to a host daemon over TCP or a Unix socket, so host-only CLIs and their credentials stay on the host, with an optional allowlist policy.
+- [Mattbusel Dev Container Features](https://github.com/Mattbusel/devcontainer-features) - Features that install checksum-verified LLM tools (an API cost dashboard, an LLM API proxy with deduplication and a circuit breaker, a per-token confidence viewer) and wire a remote MCP server into VS Code.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
